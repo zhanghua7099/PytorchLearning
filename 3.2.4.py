@@ -1,3 +1,6 @@
+'''
+一维线性回归
+'''
 import numpy as np
 import torch
 import matplotlib.pyplot as plt

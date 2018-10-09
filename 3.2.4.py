@@ -64,7 +64,7 @@ for epoch in range(num_epochs):
     loss.backward()  # 反向传播
     optimizer.step()  # 反馈计算梯度并更新权值
     if (epoch+1)%20==0:
-        print('Epoch[{}/{}], loss: {:.6f}'.format(epoch+1, num_epochs, loss.data[0]))
+        print('Epoch[{}/{}], loss: {:.6f}'.format(epoch+1, num_epochs, loss.item()))
         # loss是Variable数据类型，可以通过loss.data取出一个Tensor数据，再通过loss.data[0]打印出int或float型数据
 
 params = list(model.parameters())

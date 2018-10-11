@@ -1,6 +1,6 @@
 '''
 逻辑回归
-注：此代码时常陷入梯度不变，暂时未搞清原理，可能是权重随机初始值不合适
+注：此代码未添加归一化，因此会陷入梯度不变
 '''
 import numpy as np
 import torch
@@ -92,7 +92,7 @@ for epoch in range(50000):
     if (epoch+1)%1000 == 0:
         print('*'*10)
         print('Epoch[{}], loss: {:.4f}'.format(epoch+1, print_loss))
-        ##数据可视化
+        # # 数据可视化
         # params = list(logistic_model.parameters())
         # w0 = float(params[0].data.cpu().numpy()[0][0])
         # w1 = float(params[0].data.cpu().numpy()[0][1])

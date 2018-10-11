@@ -77,4 +77,5 @@ predict = predict.data.cpu().numpy()
 plt.plot(x_train.numpy(), y_train.numpy(), 'ro', label='Original data')
 plt.plot(x_train.numpy(), predict, label='Fitting Line')
 plt.show()
-torch.save(model, 'test.pth')
+torch.save(model, './model/test.pth')  # 全部保存
+torch.save(model.state_dict(), './model/test_param.pth')   # 只保存网络中的参数 (速度快, 占内存少)
